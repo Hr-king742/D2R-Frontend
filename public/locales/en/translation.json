@@ -1,0 +1,9 @@
+{
+  "app_title": "Farm to Table App",
+  "welcome_message": "Welcome to the App",
+  "login_heading": "Log In",
+  "email_placeholder": "Email Address",
+  "password_placeholder": "Password",
+  "login_button": "Sign In",
+  "register_link": "Create an Account"
+}

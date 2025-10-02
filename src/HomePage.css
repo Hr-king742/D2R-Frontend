@@ -1,0 +1,376 @@
+/* src/HomePage.css */
+.homepage-container {
+  padding-top: 6rem; /* This creates space to prevent content from hiding behind the navbar */
+}
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* General Styling and Layout */
+.homepage-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #f59e0b; }
+}
+
+/* Base class for elements to be animated */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(20px);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll.delay-1 { transition-delay: 0.1s; }
+.animate-on-scroll.delay-2 { transition-delay: 0.2s; }
+.animate-on-scroll.delay-3 { transition-delay: 0.3s; }
+.animate-on-scroll.delay-4 { transition-delay: 0.4s; }
+/* src/HomePage.css */
+
+/* Add these new rules to your existing styles */
+
+.icon-corn {
+  top: 15%;
+  left: 10%;
+  animation-delay: 1s;
+}
+
+.icon-tractor {
+  top: 80%;
+  left: 70%;
+  animation-delay: 1.5s;
+}
+
+.icon-onion {
+  top: 45%;
+  left: 85%;
+  animation-delay: 2s;
+}
+
+.icon-farm {
+  top: 60%;
+  left: 20%;
+  animation-delay: 2.5s;
+}
+/* --- Hero Section --- */
+.hero-section {
+  background: linear-gradient(to bottom right, #e0ffe0, #dcfce7);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.7;
+  animation: float 6s ease-in-out infinite;
+}
+
+.icon-apple { top: 10%; left: 5%; animation-delay: 0.2s; }
+.icon-carrot { top: 20%; right: 10%; animation-delay: 0.5s; }
+.icon-leaf { bottom: 20%; left: 15%; animation-delay: 0.7s; }
+.icon-utensils { bottom: 10%; right: 5%; animation-delay: 0.3s; }
+
+.hero-content {
+  z-index: 10;
+}
+
+.main-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1a5e1a;
+  margin-bottom: 1rem;
+}
+
+.sub-heading {
+  font-size: 1.25rem;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.hero-buttons button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+/* src/HomePage.css */
+
+/* Add these new rules to your existing styles */
+
+.icon-chicken {
+  top: 75%;
+  left: 90%;
+  animation-delay: 2.8s;
+}
+
+.icon-eggplant {
+  top: 10%;
+  right: 5%;
+  animation-delay: 3.2s;
+}
+
+.icon-cow {
+  top: 85%;
+  left: 5%;
+  animation-delay: 3.5s;
+}
+
+.icon-sunflower {
+  top: 30%;
+  left: 95%;
+  animation-delay: 4s;
+}
+
+.icon-radish {
+  top: 50%;
+  left: 10%;
+  animation-delay: 4.5s;
+}
+.btn-farmer {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-restaurant {
+  background-color: white;
+  color: #27ae60;
+  border: 2px solid #27ae60;
+}
+
+.hero-buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* --- Features Section --- */
+.features-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #3498db;
+}
+
+/* --- How It Works Section --- */
+.how-it-works-section {
+  background-color: #f7f7f7;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.how-it-works-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .how-it-works-steps {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .step-arrow {
+    font-size: 2rem;
+    color: #27ae60;
+    margin: 0 1rem;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.6s;
+  }
+}
+
+.step-card {
+  text-align: center;
+}
+
+.step-number {
+  background-color: #27ae60;
+  color: white;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+/* --- Impact Section --- */
+.impact-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.impact-card {
+  background-color: #f0fdf4;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.impact-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.counter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a5e1a;
+}
+
+/* --- Vision Section --- */
+.vision-section {
+  background: linear-gradient(to right, #1a5e1a, #27ae60);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.typewriter-text {
+  overflow: hidden;
+  border-right: 3px solid;
+
+  white-space: normal; 
+  text-align: center; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-right: 3px solid;
+  letter-spacing: .15em;
+  width: 0;
+  border-color: transparent;
+  animation: typewriter 3s steps(44) forwards, blink 0.8s infinite step-end;
+}
+
+.typewriter-text.visible {
+  border-color: #f59e0b; /* Add a custom color for a better blink effect */
+}
+
+/* --- CTA Footer --- */
+.cta-footer {
+  background: linear-gradient(to right, #27ae60, #f59e0b);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.cta-footer .section-title {
+  color: white;
+}
+
+.cta-footer p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: white;
+  color: #27ae60;
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: float 2s ease-in-out infinite;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  animation-play-state: paused;
+}
